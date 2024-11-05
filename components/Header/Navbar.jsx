@@ -1,10 +1,14 @@
-import { AccountBox, Search } from "@mui/icons-material";
+import { AccountBox, MenuRounded, Search } from "@mui/icons-material";
 import {
   Box,
   Button,
   Dialog,
+  Divider,
+  Drawer,
   IconButton,
   InputBase,
+  List,
+  ListItem,
   Typography,
 } from "@mui/material";
 import Link from "next/link";
@@ -14,6 +18,20 @@ import PreviewDialog from "../PreviewDialog";
 
 const Navbar = () => {
   const [openPreview, setOpenPreview] = useState(false);
+  const [state, setState] = useState({
+    top: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   const handlePreviewOpen = () => {
     setOpenPreview(true);
@@ -24,43 +42,22 @@ const Navbar = () => {
   };
   return (
     <>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Box p={1}>
-          <Image
-            src={"/images/logo.png"}
-            style={{ height: "auto", width: "4rem" }}
-            alt=""
-          />
+      <Box className="nav-content">
+        <Box className="nav-logo">
+          <Image src={"/images/logo.png"} alt="" />
         </Box>
-        <Box display="flex" justifyContent="space-around" alignItems="center">
+        <Box className="nav-menu">
           <Link href="#about">
-            <Typography variant="h6" px={4}>
-              About
-            </Typography>
+            <Typography variant="h6">About</Typography>
           </Link>
           <Link href="#projects">
-            <Typography variant="h6" px={4}>
-              Projects
-            </Typography>
+            <Typography variant="h6">Projects</Typography>
           </Link>
           <Link href="#contacts">
-            <Typography variant="h6" px={4}>
-              Contacts
-            </Typography>
+            <Typography variant="h6">Contacts</Typography>
           </Link>
         </Box>
-        <Box
-          sx={{
-            p: "2px 10px",
-            textAlign: "center",
-            width: 300,
-            backgroundColor: "#292929ff",
-            borderRadius: "20px",
-            "&:hover": {
-              backgroundColor: "#292929cc",
-            },
-          }}
-        >
+        <Box className="nav-resume">
           <Button
             className="btn-resume"
             title="Resume Preview"
@@ -68,6 +65,7 @@ const Navbar = () => {
           >
             Resume
           </Button>
+
           {/* <InputBase
           sx={{
             ml: 1,
@@ -75,10 +73,53 @@ const Navbar = () => {
             color: "white",
           }}
           placeholder="Search"
-        />
-        <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-          <Search sx={{ color: "white" }} />
-        </IconButton> */}
+           />
+          <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+            <Search sx={{ color: "white" }} />
+          </IconButton> */}
+        </Box>
+        <Box className="nav-menu-drawer">
+          <IconButton onClick={toggleDrawer("top", true)}>
+            <MenuRounded />
+          </IconButton>
+          <Drawer
+            className="drawer-menu"
+            anchor="top"
+            open={state["top"]}
+            onClose={toggleDrawer("top", false)}
+          >
+            <Box
+              role="presentation"
+              onClick={toggleDrawer("top", false)}
+              onKeyDown={toggleDrawer("top", false)}
+            >
+              <List>
+                <ListItem disablePadding>
+                  <Link href="#about">
+                    <Typography variant="h6" px={4}>
+                      About
+                    </Typography>
+                  </Link>
+                </ListItem>
+                <Divider />
+                <ListItem disablePadding>
+                  <Link href="#projects">
+                    <Typography variant="h6" px={4}>
+                      Projects
+                    </Typography>
+                  </Link>
+                </ListItem>
+                <Divider />
+                <ListItem disablePadding>
+                  <Link href="#contacts">
+                    <Typography variant="h6" px={4}>
+                      Contacts
+                    </Typography>
+                  </Link>
+                </ListItem>
+              </List>
+            </Box>
+          </Drawer>
         </Box>
       </Box>
       <PreviewDialog

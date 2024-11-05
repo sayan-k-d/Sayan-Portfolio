@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Projects from "@/components/Projects/Projects";
 import { Box, Paper, Typography } from "@mui/material";
+import Link from "next/link";
 import { useState } from "react";
 
 const Dashboard = () => {
@@ -13,7 +14,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="dashboard-layout">
+      <div className="dashboard-layout" id="dashboard">
         <Paper elevation={5} className="header-section">
           <div className="container">
             <Box display="flex" flexDirection="column" height="100%">
@@ -42,7 +43,7 @@ const Dashboard = () => {
             </Box>
           </Box>
         </Box>
-        <Box mt="5rem" className="contacts-section" id="contacts">
+        <Box className="contacts-section" id="contacts">
           <Box className="contact-me">
             <Typography variant="h2">Contact Me</Typography>
           </Box>

@@ -8,34 +8,19 @@ const Contacts = () => {
     <>
       <Box className="contacts" my="3rem">
         <Card className="contact-card">
-          <Box
-            className="contact-content"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
+          <Box className="contact-content">
             <MailOutline />
             <Typography variant="h5">sayankumar.d2000@gmail.com</Typography>
           </Box>
         </Card>
         <Card className="contact-card">
-          <Box
-            className="contact-content"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
+          <Box className="contact-content">
             <Call />
             <Typography variant="h5">+91-8617284931</Typography>
           </Box>
         </Card>
         <Card className="contact-card">
-          <Box
-            className="contact-content"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
+          <Box className="contact-content">
             <Place />
             <Typography variant="h5">Kolkata, West Bengal</Typography>
           </Box>

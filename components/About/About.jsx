@@ -5,10 +5,12 @@ import Skills from "../Skills/Skills";
 const About = () => {
   return (
     <>
-      <Typography variant="h2">About</Typography>
+      <Typography variant="h2" className="about-heading">
+        About
+      </Typography>
       <Box display="flex" gap={2}>
         <div className="horizental-line top-spacing"></div>
-        <Typography variant="h6">
+        <Typography variant="h6" className="about-description">
           Experienced
           <span className="text-yellow">
             {" "}

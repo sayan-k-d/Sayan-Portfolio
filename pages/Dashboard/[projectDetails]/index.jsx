@@ -26,19 +26,23 @@ const ProjectDetails = () => {
 
   return (
     <Box className="project-details">
-      <Box className="navigate-home">
+      <Box className="navigate-home back-home">
         <Link href={"/Dashboard#projects"} title="Navigate To Dashboard">
           <Home />
         </Link>
       </Box>
       <Paper
         component={Box}
-        height={"100vh"}
         sx={{ backgroundImage: `url(${image})` }}
         className="project-jumbotron"
       >
         <Box className="project-title">
           <Typography variant="h2">{title}</Typography>
+          <Box className="project-link project-link-visible">
+            <Link href={link} target="_blank">
+              View Project
+            </Link>
+          </Box>
         </Box>
       </Paper>
       <Box className="project-description">
@@ -50,7 +54,7 @@ const ProjectDetails = () => {
           </Typography>
         ))}
       </Box>
-      <Box className="project-link">
+      <Box className="project-link project-link-hidden">
         <Link href={link} target="_blank">
           View Project
         </Link>

@@ -5,7 +5,7 @@ import { Image } from "react-bootstrap";
 
 const Skills = () => {
   return (
-    <Box mt="40px">
+    <Box mt="40px" className="skills-section">
       <Typography variant="h2" textAlign="center">
         My Skills
       </Typography>

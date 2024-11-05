@@ -16,17 +16,11 @@ const Projects = ({ visibleCount, setVisibleCount, show, setShow }) => {
   };
 
   return (
-    <Box mt="40px" id="projects">
+    <Box mt="40px" id="projects" className="projects-section">
       <Typography variant="h2" textAlign="center">
         Projects
       </Typography>
-      <Box
-        className={`projects ${show ? "show" : ""}`}
-        display="grid"
-        gap={2}
-        mt={5}
-        gridTemplateColumns="repeat(auto-fit, minmax(30%, 1fr))"
-      >
+      <Box className={`projects ${show ? "show" : ""}`}>
         <Suspense fallback={<div>loading...</div>}>
           {projectsData.slice(0, visibleCount).map((project, index) => (
             <ProjectCards

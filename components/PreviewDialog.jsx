@@ -9,48 +9,20 @@ const PreviewDialog = ({ openPreview, handlePreviewClose }) => {
       fullScreen
       maxWidth="md"
     >
-      <Box
-        p={2}
-        className="preview-frame"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-      >
+      <Box p={2} className="preview-frame">
         <Typography variant="h6">Sayan Kumar Das Resume</Typography>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#000",
-            display: "flex",
-            overflow: "hidden",
-            mt: 2,
-            p: "8px",
-          }}
-        >
+        <Box className="preview-content">
           <iframe
             src="https://drive.google.com/file/d/1b1S2xghxPv0KHj3ojGn4FYhJuHMikYMF/preview"
             width="80%"
             height="100%"
             title="Sayan Kumar Das Resume"
-            style={{
-              border: "none",
-              marginTop: "16px",
-              padding: "1rem",
-              margin: "auto",
-            }}
           />
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={2}
-          >
+          <Box className="close-button">
             <Button
               onClick={handlePreviewClose}
               variant="contained"
               color="primary"
-              sx={{ mt: 2 }}
             >
               Close Preview
             </Button>
