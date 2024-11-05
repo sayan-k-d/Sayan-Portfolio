@@ -20,7 +20,7 @@ const Skills = () => {
           <Card className="skills-card" key={skills.name + index}>
             <CardContent className="skill-centents">
               <div className="card-image">
-                <Image src={skills.image} />
+                <Image src={skills.image} alt="" />
               </div>
               <Typography variant="h6" className="text-white">
                 {skills.name}

@@ -8,7 +8,8 @@ const HeaderContent = () => {
     <Box className="header-content">
       <Box>
         <Typography className="content-name">
-          I'M <span className="text-yellow text-600 ">Sayan Kumar Das</span>
+          I&apos;M{" "}
+          <span className="text-yellow text-600 ">Sayan Kumar Das</span>
         </Typography>
         <Typography className="content-description">
           Full Stack Developer with a passion for technology and design.

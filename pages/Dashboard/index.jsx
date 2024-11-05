@@ -5,7 +5,6 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Projects from "@/components/Projects/Projects";
 import { Box, Paper, Typography } from "@mui/material";
-import Link from "next/link";
 import { useState } from "react";
 
 const Dashboard = () => {

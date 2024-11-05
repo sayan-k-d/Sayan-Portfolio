@@ -14,6 +14,7 @@ const ProjectDetails = () => {
     if (!projectData) {
       router.push("/Dashboard#projects");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!projectData)
     return (

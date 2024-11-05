@@ -1,12 +1,10 @@
-import { AccountBox, MenuRounded, Search } from "@mui/icons-material";
+import { MenuRounded } from "@mui/icons-material";
 import {
   Box,
   Button,
-  Dialog,
   Divider,
   Drawer,
   IconButton,
-  InputBase,
   List,
   ListItem,
   Typography,
