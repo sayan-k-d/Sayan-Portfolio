@@ -19,6 +19,12 @@ export const projectsData = [
     link: "https://yuvipep.com/careers",
   },
   {
+    title: "Resolution Tracker",
+    description: `Resolution Tracker Application is a powerful and highly interactive tool, designed to help you set, manage, and achieve personal and professional goals. With easy goal creation, real-time progress tracking, and celebratory animations when milestones are achieved, it makes your trip toward self-improvement exciting and rewarding. Its user-friendly design guarantees smooth navigation, while its social features allow you to share your resolutions and be inspired by a supportive community. Whether it's personal growth, career opportunities, or simply new hobbies, be motivated, and on top of the things with this app—it's the perfect companion for the year ahead that will help you achieve all your resolutions.`,
+    image: "/images/resolute.png",
+    link: "https://resolute-drab.vercel.app/",
+  },
+  {
     title: "Street Canvas",
     description:
       "The Street Canvas portfolio website is a carefully crafted platform designed to showcase the work and journey of Nikita Biswas, a dedicated street photographer from Kolkata. This website begins with a visually engaging Landing page, which provides visitors with direct links to her various social media profiles and an impressive display of her photography portfolio. This initial interaction captures the essence of her work and offers easy access to her online presence. Following this, the About page takes a personal approach, offering an in-depth look at Nikita's story. Here, she shares her journey, passion for street photography, career goals, and her connection to the streets of various places, giving visitors insight into her perspective and motivation. Lastly, the Booking page facilitates direct engagement by allowing interested individuals to schedule sessions or inquire about her work. This page also includes a display of her available slots, making it easy for clients to choose a convenient time to connect. Altogether, Street Canvas is an interactive, user-friendly site that effectively promotes Nikita Biswas's talent and facilitates connections with potential clients",
